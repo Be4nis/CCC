@@ -1,17 +1,24 @@
-f = int(input())
-removals = int(input())
+k = int(input())
+
 friends = []
-for i in range(f):
-    friends.append(i)
+for i in range (k):
+    friends.append(i+1)
 
-outs = []
-for i in range(removals):
-    out = int(input())
-    outs.append(out)
-    
-finalfriend = []
-for out in outs:
-    for friend in range(0, f, out):
-        finalfriend.append(friend)
+m = int(input())
 
-print (finalfriend)
+for round in range(m):
+    r = int(input())
+
+    # eliminate every rth friend
+    newfriends = []
+    for i in range(len(friends)):
+        if (i+1) % r != 0:
+            newfriends.append (friends[i])
+
+    # copy the new friends back into the old one
+    friends = []
+    for f in newfriends:
+        friends.append(f)
+
+for f in friends:
+    print (f)
