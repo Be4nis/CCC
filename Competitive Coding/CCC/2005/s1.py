@@ -11,15 +11,9 @@ nine = ["W", "X", "Y", "Z"]
 def split(word):
     return [char for char in word]
 def convert(s):
-
-    # initialization of string to ""
     new = ""
-
-    # traverse in the string 
     for x in s:
         new += x 
-
-    # return string 
     return new
 telephones = []
 
