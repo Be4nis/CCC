@@ -1,11 +1,3 @@
-i = int(input())
-k = []
-def split(word):
-    return [char for char in word]
-for h in range(i):
-    p = list(input())
-    while "-" in p:
-        p.remove("-")
-    k.append(p)
-
-print (k)
+list = [1, 2, 3, 4, 5, 6, 7]
+for l in list:
+    print (l)
