@@ -1,17 +1,21 @@
-number_of_friends = int(input(""))
-number_of_rounds = int(input(""))
+numofguests = int(input(""))
 
-listoffriends = []
+rounds = int(input(""))
 
-for i in range(number_of_friends):
-    listoffriends.append(i + 1)
-for i in range(number_of_rounds):
-    indextoremove = int(input(""))
-    indexes = []
-    print (listoffriends[0], len(listoffriends))
-    for i in range(0, len(listoffriends), indextoremove):
-        indexes.insert(0, i - 1)
-        print (i)   
-    for index in indexes:
-        listoffriends.pop(index)
-    print (listoffriends)
+listofguests = []
+for num in range(numofguests):
+    listofguests.append(num + 1)
+
+
+for i in range(rounds):
+    k = int(input(""))
+    listofguests.insert(0, "*")
+    listofindexestoremove = []
+    for guest in listofguests:
+        if listofguests.index(guest) % k == 0:
+            listofindexestoremove.insert(0, listofguests.index(guest))
+    for indexes in listofindexestoremove:
+        listofguests.pop(indexes)
+
+for list in listofguests:
+    print (list)
