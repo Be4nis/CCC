@@ -5,7 +5,7 @@ numlist = [0]*8
 for i in range(1, 8):
     taskList[i] = []
 
-taskList[1].append(7)
+taskList[1].append(7) 
 numlist[7] += 1
 
 taskList[1].append(4)
